@@ -1,0 +1,60 @@
+.footerContainer {
+  min-height: 120px;
+  display: flex;
+  align-items: center;
+  background: #222;
+}
+
+.footer {
+  padding-top: 24px;
+  margin-bottom: 24px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.corpInfo {
+  width: 269px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.corpItem {
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 112%;
+  color: #fff;
+}
+
+.menu {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.menuItem {
+  display: flex;
+  align-items: center;
+}
+
+.menuLink {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 107%;
+  color: #8b8b8b;
+
+  &:hover {
+    color: #fff;
+  }
+}
+
+.policy {
+  text-align: end;
+  width: 269px;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 107%;
+  color: #fff;
+}

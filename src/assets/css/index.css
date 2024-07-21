@@ -1,0 +1,66 @@
+@import "fonts.css";
+
+*, *:before, *:after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: 'Yandex Sans Display', sans-serif;
+}
+
+img {
+  max-width: 100%;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.w600 {
+  width: 600px;
+}
+
+.offset {
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+.maxWidth {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1368px;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+  background-size: 20px 20px;
+  background-repeat: no-repeat;
+  flex-shrink: 0;
+}
+
+.icon-schedule {
+  background-image: url('../img/svg/schedule.svg');
+}
+
+.icon-wallet {
+  background-image: url('../img/svg/wallet.svg');
+}
+
+.icon-wrench {
+  background-image: url('../img/svg/wrench.svg');
+}
+
+.icon-whatsapp {
+  background-image: url('../img/png/whatsapp.png');
+  background-size: 19px 19px;
+}
+
+.icon-viber {
+  background-image: url('../img/png/viber.png');
+  background-size: 21px 23px;
+}
