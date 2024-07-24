@@ -1,4 +1,5 @@
 .form {
+  position: relative;
   display: flex;
   flex-direction: column;
 }
@@ -13,18 +14,19 @@
 }
 
 .span {
+  margin-bottom: 7px;
   font-weight: 300;
   font-size: 14px;
   line-height: 123%;
   color: #000;
-  margin-bottom: 7px;
 }
 
 .input {
+  position: relative;
+  height: 45px;
   padding: 8px 10px;
   border: 0.30px solid #898989;
   border-radius: 4px;
-  height: 45px;
   background: #fff;
   outline: none;
 
@@ -32,13 +34,24 @@
   font-size: 14px;
   line-height: 123%;
   color: #000;
+
+  transition: border .2s, box-shadow .2s;
+
+  &:hover {
+    border: 0.30px solid #ffdf39;
+    box-shadow: 0 0 5px #00000010;
+  }
+
+  &:focus {
+    border: 0.30px solid #ffdf39;
+  }
 }
 
 .submitContainer {
-  margin-top: 43px;
   display: flex;
   align-items: center;
   gap: 27px;
+  margin-top: 43px;
 }
 
 .submitText {
@@ -47,8 +60,12 @@
   line-height: 107%;
   color: #8b8b8b;
 
-  span {
+  a {
     text-decoration: underline;
     text-decoration-skip-ink: none;
+    transition: color .2s;
+    &:hover {
+      color: #000;
+    }
   }
 }

@@ -4,12 +4,16 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --host",
     "build": "tsc -b && vite build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },
   "dependencies": {
+    "@emailjs/browser": "^4.4.1",
+    "classnames": "^2.5.1",
+    "framer-motion": "^11.3.17",
+    "imask": "^7.6.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "sass": "^1.77.8"

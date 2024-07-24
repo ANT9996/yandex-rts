@@ -16,14 +16,14 @@ const Footer:FC = () => {
         </ul>
 
         <ul className={c.menu}>
-          <li className={c.menuItem}><a className={c.menuLink} href="#">Начало работы</a></li>
-          <li className={c.menuItem}><a className={c.menuLink} href="#">Преимущества работы</a></li>
+          <li className={c.menuItem}><a className={c.menuLink} href="#head">Начало работы</a></li>
+          <li className={c.menuItem}><a className={c.menuLink} href="#advantages">Преимущества работы</a></li>
           <li className={c.menuItem}><a className={c.menuLink} href="#">Отзывы</a></li>
-          <li className={c.menuItem}><a className={c.menuLink} href="#">Приложение</a></li>
-          <li className={c.menuItem}><a className={c.menuLink} href="#">Контакты</a></li>
+          <li className={c.menuItem}><a className={c.menuLink} href="#mobileApp">Приложение</a></li>
+          <li className={c.menuItem}><a className={c.menuLink} href="#contacts">Контакты</a></li>
         </ul>
 
-        <div className={c.policy}>Политика конфиденциальности</div>
+        <a href='#' className={c.policy}>Политика конфиденциальности</a>
       </div>
     </footer>
   );

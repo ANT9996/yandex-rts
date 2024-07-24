@@ -6,19 +6,37 @@
 }
 
 .footer {
-  padding-top: 24px;
-  margin-bottom: 24px;
+  padding-top: 16px;
+  padding-bottom: 24px;
   width: 100%;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+
+  @media (max-width: 1300px) {
+    padding-top: 32px;
+    padding-bottom: 32px;
+    flex-direction: column;
+    gap: 32px;
+  }
 }
 
 .corpInfo {
   width: 269px;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
+  margin-top: 7px;
+
+  @media (max-width: 1300px) {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+    width: 100%;
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: 16px;
+  }
 }
 
 .corpItem {
@@ -26,17 +44,54 @@
   font-size: 14px;
   line-height: 112%;
   color: #fff;
+
+  &:not(:last-child) {
+    margin-bottom: 14px;
+  }
+
+  @media (max-width: 1300px) {
+    &:not(:last-child) {
+      margin: 0;
+    }
+  }
 }
 
 .menu {
   display: flex;
-  gap: 16px;
+  gap: 19px;
   align-items: center;
+  padding-left: 30px;
+
+  @media (max-width: 1300px) {
+    order: -1;
+  }
+
+  @media (max-width: 768px) {
+    width: 100%;
+    padding-left: 0;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 .menuItem {
   display: flex;
   align-items: center;
+  flex-shrink: 0;
+
+  &:nth-child(1) {
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 112%;
+    color: #fff;
+  }
+  &:nth-child(2) {
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 107%;
+    color: #fff;
+  }
 }
 
 .menuLink {
@@ -44,6 +99,7 @@
   font-size: 15px;
   line-height: 107%;
   color: #8b8b8b;
+  transition: color .2s;
 
   &:hover {
     color: #fff;
@@ -51,10 +107,20 @@
 }
 
 .policy {
+  display: block;
+  margin-left: auto;
   text-align: end;
-  width: 269px;
   font-weight: 300;
   font-size: 15px;
   line-height: 107%;
   color: #fff;
+  transition: color .2s;
+
+  &:hover {
+    color: #ffffff60;
+  }
+
+  @media (max-width: 1300px) {
+    margin-left: initial;
+  }
 }

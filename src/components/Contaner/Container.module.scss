@@ -1,17 +1,24 @@
 .container {
   display: flex;
-  align-items: center;
   justify-content: center;
   background: #F0F0F0;
+
+  @media (max-width: 1024px) {
+    flex-direction: column-reverse;
+  }
 }
 
-.offset32 {
-  padding-top: 32px;
-  padding-bottom: 32px;
+.offset {
+  padding-top: 63px;
+  padding-bottom: 63px;
 }
 
 .content {
   flex-shrink: 0;
+
+  @media (max-width: 1024px) {
+    width: 100%!important;
+  }
 }
 
 .image {
@@ -19,9 +26,19 @@
   align-self: stretch;
 
   img {
+    height: 100%;
     object-fit: cover;
     object-position: center center;
-    height: 100%;
+  }
+
+  @media (max-width: 1024px) {
+    display: none;
+    height: 400px;
+    img {
+      height: initial;
+      object-position: top center;
+      width: 100%;
+    }
   }
 }
 
