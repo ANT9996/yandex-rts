@@ -59,6 +59,12 @@ const Header:FC = () => {
     transition: { duration: 0.3 }
   }
 
+  const animBurger = {
+    initial: {x: '100%'},
+    animate: {x: 0},
+    transition: { duration: 0.2 }
+  }
+
   return (
     <motion.header className={`${c.header} offset maxWidth`} {...anim}>
       <a href={'#'} className={c.logo}>
@@ -77,13 +83,13 @@ const Header:FC = () => {
           : <>
             <button ref={buttonRef} className={`${c.burgerIcon} ${mobileMenuOpened ? c.mobileMenuOpened : ''}`} onClick={() => setMobileMenuOpened(prev => !prev)}></button>
             {
-              mobileMenuOpened && <ul className={`${c.burgerMenu} offset`}>
+              mobileMenuOpened && <motion.ul className={`${c.burgerMenu} offset`} {...animBurger}>
                 {menuElemsMap}
                 <div className={c.contact}>
                   <div className={c.contactPhone}>8 (3812) 49-46-45</div>
                   <a href={'#'} className={c.contactText}>заказать звонок</a>
                 </div>
-              </ul>
+              </motion.ul>
             }
           </>
       }
