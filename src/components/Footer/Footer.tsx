@@ -1,10 +1,11 @@
 import {FC} from 'react';
 import c from './Footer.module.scss'
+import classNames from 'classnames';
 
 const Footer:FC = () => {
   return (
     <footer className={c.footerContainer}>
-      <div className={`${c.footer} maxWidth offset`}>
+      <div className={classNames(c.footer, 'maxWidth', 'offset')}>
         <ul className={c.corpInfo}>
           <li className={c.corpItem}>
             Официальный партнер Яндекс Такси

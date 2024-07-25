@@ -14,6 +14,7 @@ import img1 from '../../assets/img/webp/image 2.webp'
 import img2 from '../../assets/img/webp/image.webp'
 import img3 from '../../assets/img/webp/app-background.webp'
 import img4 from '../../assets/img/webp/form-background.webp'
+import classNames from 'classnames';
 
 
 const Home:FC = () => {
@@ -43,8 +44,8 @@ const Home:FC = () => {
           </a>
         </Container>
 
-        <motion.section className={`${c.start} offset maxWidth`} id='start' {...anim}>
-          <h2 className={`${c.head} ${c.startHead}`}>Начало работы</h2>
+        <motion.section className={classNames(c.start, 'offset', 'maxWidth')} id='start' {...anim}>
+          <h2 className={classNames(c.head, c.startHead)}>Начало работы</h2>
           <ul className={c.startMenu}>
             <li className={c.startMenuItem}>
               <div className={c.itemContainer}>
@@ -78,24 +79,24 @@ const Home:FC = () => {
         </motion.section>
 
         <Container image={img2} dark={true} paddingTop={65} paddingBottom={67} id={'advantages'}>
-          <h2 className={`${c.head} ${c.advantagesHead}`}>Работа в удовольствие</h2>
+          <h2 className={classNames(c.head, c.advantagesHead)}>Работа в удовольствие</h2>
           <ul className={c.advantages}>
             <li className={c.advantagesItem}>
-              <div className={`${c.advantagesIcon} icon icon-schedule`}></div>
+              <div className={classNames(c.advantagesIcon, 'icon', 'icon-schedule')}></div>
               <div className={c.advantagesContent}>
                 <h3 className={c.advantagesTitle}>Удобный график</h3>
                 <p className={c.advantagesText}>Работа по несколько часов в неделю или каждый день - вы сами выбираете свой график</p>
               </div>
             </li>
             <li className={c.advantagesItem}>
-              <div className={`${c.advantagesIcon} icon icon-wallet`}></div>
+              <div className={classNames(c.advantagesIcon, 'icon', 'icon-wallet')}></div>
               <div className={c.advantagesContent}>
                 <h3 className={c.advantagesTitle}>Деньги - сразу</h3>
                 <p className={c.advantagesText}>Выводите деньги с помощью удобного мобильного приложения</p>
               </div>
             </li>
             <li className={c.advantagesItem}>
-              <div className={`${c.advantagesIcon} icon icon-wrench`}></div>
+              <div className={classNames(c.advantagesIcon, 'icon', 'icon-wrench')}></div>
               <div className={c.advantagesContent}>
                 <h3 className={c.advantagesTitle}>Партнерская программа</h3>
                 <p className={c.advantagesText}>Скидка 20% на ремонт и сервисное обслуживание для водителей парка</p>
@@ -104,8 +105,8 @@ const Home:FC = () => {
           </ul>
         </Container>
 
-        <section className={`${c.mobileApp}`} id='mobileApp'>
-          <div className={`${c.mobileContent} offset w600`}>
+        <section className={c.mobileApp} id='mobileApp'>
+          <div className={classNames(c.mobileContent, 'offset', 'w600')}>
             <h2 className={c.head}>Мобильное приложение</h2>
             <p className={c.mobileAppText}>
               Мы разработали мобильное приложение для того,
@@ -118,8 +119,8 @@ const Home:FC = () => {
           </div>
         </section>
 
-        <section className={`${c.contacts} maxWidth offset`} id='contacts'>
-          <h2 className={`${c.head} ${c.contactsHead}`}>Контакты</h2>
+        <section className={classNames(c.contacts, 'maxWidth', 'offset')} id='contacts'>
+          <h2 className={classNames(c.head, c.contactsHead)}>Контакты</h2>
 
           <div className={c.contactsContainer}>
             <div className={c.contactsLeftSide}>
@@ -149,7 +150,7 @@ const Home:FC = () => {
         </section>
 
         <Container image={img4} id={'form'}>
-          <h2 className={`${c.head} ${c.jobHead}`}>Оставить заявку</h2>
+          <h2 className={classNames(c.head, c.jobHead)}>Оставить заявку</h2>
           <Form/>
         </Container>
 

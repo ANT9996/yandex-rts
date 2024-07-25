@@ -2,6 +2,7 @@ import {FC, useEffect, useRef, useState} from 'react';
 import c from './Header.module.scss';
 import logoImg from '../../assets/img/svg/logo.svg';
 import { motion } from 'framer-motion';
+import classNames from 'classnames';
 
 const width = 1025;
 
@@ -66,7 +67,7 @@ const Header:FC = () => {
   }
 
   return (
-    <motion.header className={`${c.header} offset maxWidth`} {...anim}>
+    <motion.header className={classNames(c.header, 'offset', 'maxWidth')} {...anim}>
       <a href={'#'} className={c.logo}>
         <img className={c.logoImg} src={logoImg} alt=""/>
         <span className={c.logoText}>Официальный партнер <br/> г.Омск</span>
@@ -81,9 +82,9 @@ const Header:FC = () => {
             </div>
           </>
           : <>
-            <button ref={buttonRef} className={`${c.burgerIcon} ${mobileMenuOpened ? c.mobileMenuOpened : ''}`} onClick={() => setMobileMenuOpened(prev => !prev)}></button>
+            <button ref={buttonRef} className={classNames(c.burgerIcon, mobileMenuOpened && c.mobileMenuOpened)} onClick={() => setMobileMenuOpened(prev => !prev)}></button>
             {
-              mobileMenuOpened && <motion.ul className={`${c.burgerMenu} offset`} {...animBurger}>
+              mobileMenuOpened && <motion.ul className={classNames(c.burgerMenu, 'offset')} {...animBurger}>
                 {menuElemsMap}
                 <div className={c.contact}>
                   <div className={c.contactPhone}>8 (3812) 49-46-45</div>

@@ -13,12 +13,10 @@ interface iContainer {
 
 const Container:FC<PropsWithChildren<iContainer>> = ({children, image, dark, paddingTop, paddingBottom, id}) => {
   const sectionClassList = classNames(c.container, dark && c.darkBackground)
-  const contentClassList = classNames(
-    'offset',
-    c.content, 
-    dark && c.lightColor, 
-    image && `w600 ${c.offset}`, 
-  )
+  const contentClassList = classNames('offset', 
+  c.content, 
+  dark && c.lightColor, 
+  image && classNames('w600', c.offset))
 
   const anim = {
     initial: { opacity: 0},
