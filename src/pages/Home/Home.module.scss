@@ -73,9 +73,9 @@
   }
 }
 
-.startMenuItem {
- ////////////////////////////////////////////////////////////////
-}
+// .startMenuItem {
+
+// }
 
 .itemContainer {
   display: flex;
@@ -137,9 +137,9 @@
   flex-shrink: 0;
 }
 
-.advantagesContent {
+// .advantagesContent {
 
-}
+// }
 
 .advantagesTitle {
   margin-bottom: 8px;
@@ -193,10 +193,10 @@
   border-radius: 4px;
   background: url("../../assets/img/png/image.png") no-repeat center center;
   background-size: contain;
-  transition: transform .2s;
+  transition: transform .3s;
 
   &:hover {
-    transform: translateY(-1px);
+    transform: translateX(3px);
   }
 }
 
