@@ -4,6 +4,8 @@ import Button from "../Button/Button.tsx";
 import IMask from 'imask';
 import emailjs from '@emailjs/browser';
 import { EMAIL, PUBLIC_KEY, SERVICE_ID, TEMPLATE_ID } from '../../constants.ts';
+import { toast } from 'react-toastify';
+
 emailjs.init({publicKey: PUBLIC_KEY})
 
 const Form:FC = () => {
@@ -19,13 +21,17 @@ const Form:FC = () => {
     setIsLoading(true)
 
     emailjs.send(SERVICE_ID, TEMPLATE_ID, {fio, phone, email: EMAIL})
-    .then(r => console.log(r))
-    .catch(err => console.error('Ошибка отправки письма: ', err))
-    .finally(() => {
-      setIsLoading(false)
+    .then(r => {
+      console.log(r)
       setFio('')
       setPhone('')
+      toast.success('Заявка успешно отправлена!')
     })
+    .catch(err => {
+      console.error('Ошибка отправки письма: ', err)
+      toast.error('Ошибка отправки письма!')
+    })
+    .finally(() => setIsLoading(false))
   }
 
   useEffect(() => {

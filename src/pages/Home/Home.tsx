@@ -3,14 +3,18 @@ import Header from "../../components/Header/Header.tsx";
 import Container from "../../components/Contaner/Container.tsx";
 import Button from "../../components/Button/Button.tsx";
 import Form from "../../components/Form/Form.tsx";
+import Footer from "../../components/Footer/Footer.tsx";
+import { motion } from 'framer-motion';
+
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 import c from './Home.module.scss'
 import img1 from '../../assets/img/webp/image 2.webp'
 import img2 from '../../assets/img/webp/image.webp'
 import img3 from '../../assets/img/webp/app-background.webp'
 import img4 from '../../assets/img/webp/form-background.webp'
-import Footer from "../../components/Footer/Footer.tsx";
-import { motion } from 'framer-motion';
+
 
 const Home:FC = () => {
 
@@ -22,6 +26,7 @@ const Home:FC = () => {
 
   return (
     <div className={c.App}>
+      <ToastContainer/>
       <Header/>
       <main>
         <Container image={img1} id={'head'}>
@@ -33,7 +38,7 @@ const Home:FC = () => {
             Работайте тогда, когда удобно
             Крупнейший автопарк в г.Омске
           </p>
-          <a href="#">
+          <a href="#form">
             <Button text={'Заполните анкету'} type={'small'}/>
           </a>
         </Container>
@@ -44,14 +49,14 @@ const Home:FC = () => {
             <li className={c.startMenuItem}>
               <div className={c.itemContainer}>
                 <div className={c.menuItemNum}>1.</div>
-                <h3 className={c.menuItemHead}><span>Оставьте заявку</span> на сайте</h3>
+                <h3 className={c.menuItemHead}><a href='#form'>Оставьте заявку</a> на сайте</h3>
               </div>
               <p className={c.menuItemText}>мы свяжемся с вами для уточнения деталей</p>
             </li>
             <li className={c.startMenuItem}>
               <div className={c.itemContainer}>
                 <div className={c.menuItemNum}>2.</div>
-                <h3 className={c.menuItemHead}><span>Скачайте</span> приложение</h3>
+                <h3 className={c.menuItemHead}><a href='#mobileApp'>Скачайте</a> приложение</h3>
               </div>
               <p className={c.menuItemText}>для удобного вывода средств</p>
             </li>

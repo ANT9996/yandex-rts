@@ -89,6 +89,11 @@
   text-decoration: underline;
   text-decoration-skip-ink: none;
   color: #8b8b8b;
+  transition: color .2s;
+
+  &:hover {
+    color: #000
+  }
 }
 
 .burgerIcon {
